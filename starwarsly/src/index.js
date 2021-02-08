@@ -1,21 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
-import { store, persistedStore} from "./store"
+import { store, persistedStore } from "./store";
 
-
+/**
+ * Provider wraps around App in order to give it access to information located within the store.
+ * PersistGate delays the rendering of the UI until the persisted state has been retrieved and saved to redux
+ */
 ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistedStore}>
-      <App />
-    </PersistGate>
-  </Provider>,
-  document.getElementById("root")
+	<Provider store={store}>
+		<PersistGate loading={null} persistor={persistedStore}>
+			<App />
+		</PersistGate>
+	</Provider>,
+	document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

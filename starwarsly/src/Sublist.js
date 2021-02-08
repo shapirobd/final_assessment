@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /**
- * Takes 2 arguments:
+ * Takes 1 argument - an object containing the following:
  * - items: an array of items (films, people, or planets)
  * - title: the category of the list ("Films", "People", or "Planets")
  *
