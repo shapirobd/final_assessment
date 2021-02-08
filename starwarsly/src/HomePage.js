@@ -10,10 +10,6 @@ import { resetAll } from "./actions/reset";
  * - if there are not already films within the store, show the start button
  */
 function HomePage() {
-	// const films = useSelector((st) => st.films);
-	// console.log(films);
-	// const loaded = films[1] !== undefined;
-	// console.log(loaded);
 	const loaded = useSelector((st) => st.films[1] !== undefined);
 	const dispatch = useDispatch();
 
