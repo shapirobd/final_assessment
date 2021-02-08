@@ -22,8 +22,9 @@ function getPlanetFromAPI(id) {
 	return async function (dispatch) {
 		const res = await axios.get(`https://swapi.dev/api/planets/${id}/`);
 		let { name, population, climate, residents, films } = res.data;
-
+		console.log(residents);
 		residents = residents.map((url) => url.match(/\d+/)[0]);
+		console.log(residents);
 		films = films.map((url) => url.match(/\d+/)[0]);
 
 		const planet = { id, name, population, climate, residents, films };

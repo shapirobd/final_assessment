@@ -4,7 +4,7 @@ const INITIAL_STATE = {};
 
 /**
  * Reducer for planets that dictates how to modify redux state depending on the action type:
- * - RESET_ALL: set state back to INITIAL_STATE (INITIAL_STATE = {})
+ * - RESET_ALL: set planets state back to INITIAL_STATE (INITIAL_STATE = {})
  * - LOAD_PLANET: keep films & people the same, but update planets to include the planet from the action's payload
  * - default: return state
  *

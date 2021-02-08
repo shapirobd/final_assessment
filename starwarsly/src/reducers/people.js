@@ -4,7 +4,7 @@ const INITIAL_STATE = {};
 
 /**
  * Reducer for people that dictates how to modify redux state depending on the action type:
- * - RESET_ALL: set state back to INITIAL_STATE (INITIAL_STATE = {})
+ * - RESET_ALL: set people state back to INITIAL_STATE (INITIAL_STATE = {})
  * - LOAD_PERSON: keep films & planets the same, but update people to include the person from the action's payload
  * - default: return state
  *
